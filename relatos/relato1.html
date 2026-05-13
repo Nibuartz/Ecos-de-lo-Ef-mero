@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakura y Yohiro - Ecos de lo Efímero</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: #120811;
+            padding: 40px 20px;
+        }
+
+        .background {
+            position: fixed;
+            inset: 0;
+            background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.85)), url("../portada.jpg");
+            background-size: cover;
+            background-position: center;
+            filter: blur(3px);
+            z-index: -1;
+        }
+
+        .story-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(20, 10, 25, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 40px;
+            border: 1px solid rgba(232, 200, 180, 0.3);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #e8d5b5;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(232, 200, 180, 0.3);
+            padding-bottom: 5px;
+        }
+
+        .back-link:hover {
+            color: #fff5ec;
+            border-bottom-color: #e8d5b5;
+        }
+
+        h1 {
+            color: #ffe6f2;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            color: #c9b6a4;
+            font-style: italic;
+            margin-bottom: 30px;
+            border-left: 3px solid #e8d5b5;
+            padding-left: 15px;
+        }
+
+        .story-content {
+            color: #e0d0c0;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .story-content p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* ========== ESTILOS PARA LAS IMÁGENES ========== */
+        .image-gallery {
+            margin: 40px 0 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .gallery-item {
+            flex: 1;
+            min-width: 200px;
+            max-width: 280px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 16px;
+            overflow: hidden;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(232, 200, 180, 0.2);
+            cursor: pointer;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            border-color: rgba(232, 200, 180, 0.5);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+            display: block;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.02);
+        }
+
+        .image-caption {
+            padding: 10px;
+            font-size: 0.75rem;
+            color: #c9b6a4;
+            font-style: italic;
+            border-top: 1px solid rgba(232, 200, 180, 0.15);
+        }
+
+        .footer-story {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(232, 200, 180, 0.2);
+            text-align: center;
+            font-size: 0.8rem;
+            color: #b8a99a;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .story-container {
+                padding: 25px;
+            }
+            
+            h1 {
+                font-size: 1.6rem;
+            }
+            
+            .story-content {
+                font-size: 0.95rem;
+            }
+            
+            .gallery-item {
+                min-width: 160px;
+            }
+            
+            .gallery-item img {
+                height: 140px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .gallery-item {
+                min-width: 140px;
+            }
+            
+            .gallery-item img {
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    
+    <div class="story-container">
+        <a href="../index.html" class="back-link">← Volver al libro</a>
+        
+        <h1>🌸 Sakura y Yohiro</h1>
+        <div class="subtitle">La historia del cerezo que aprendió a florecer</div>
+        
+        <div class="story-content">
+            <p>
+                En un bosque donde todos los árboles crecían fuertes y llenos de vida, existía
+                uno distinto. Mientras los demás florecían con abundancia, aquel permanecía seco, 
+                con ramas delgadas y un tronco que parecía desgastado por el tiempo. Nadie se detenía a 
+                observarlo; no ofrecía sombra ni belleza, y con los años fue quedando en el olvido.
+            </p>
+            
+            <p>
+                Su presencia no generaba rechazo, pero tampoco interés. Era simplemente
+                un árbol más, condenado a existir sin propósito aparente. En medio de la vida
+                que lo rodeaba, parecía no pertenecer.   
+            </p>         
+                        
+            <p>
+                Un día, un hada que recorría el bosque notó su estado. No vio solo su apariencia, 
+                sino la tristeza que parecía habitar en él. Decidió intervenir y le ofreció una 
+                oportunidad: durante veinte años podría sentir como un ser humano. Tendría emociones, 
+                pensamientos y la capacidad de comprender el mundo.
+            </p>
+            
+            <p>
+                A cambio, había una condición. Si al finalizar ese tiempo no lograba florecer, 
+                desaparecería por completo.
+            </p>
+                        
+            <p>
+                Convertido en humano, adoptó el nombre de Yohiro. Comenzó a recorrer el mundo y 
+                descubrió una realidad marcada por la guerra, la pérdida y la fragilidad de la 
+                vida. Durante mucho tiempo se mantuvo distante, incapaz de encontrar algo que le diera 
+                sentido a su existencia.
+            </p>
+            
+            <p>
+                Todo cambió cuando conoció a Sakura. A diferencia de los demás, ella no mostraba miedo 
+                ni desconfianza. Su presencia transmitía calma, y a su lado el mundo parecía detenerse.
+            </p>
+            
+            <p>
+                Con el tiempo, su vínculo se hizo más profundo. Yohiro descubrió emociones que nunca había 
+                experimentado, pero también entendió que el tiempo del hechizo estaba por terminar.
+            </p>
+            
+            <p>
+                Cuando regresó a su forma original, Sakura no lo abandonó. Permaneció a su lado, y en ese instante el árbol 
+                floreció por primera vez.
+            </p>
+
+            <p>
+                Desde entonces, el cerezo se convirtió en símbolo de lo efímero: una belleza que dura poco, pero cuyo significado permanece.
+            </p>
+        </div>
+
+        <!-- GALERÍA DE IMÁGENES -->
+        <div class="image-gallery">
+            <div class="gallery-item" data-img="../Images/arbol-sakura.png">
+                <img src="../Images/arbol-sakura.png" alt="Árbol de Sakura">
+                <div class="image-caption">🌸 El cerezo antes de florecer</div>
+            </div>
+            <div class="gallery-item" data-img="../Images/sakuu-yohi.png">
+                <img src="../Images/sakuu-yohi.png" alt="Encuentro de Sakura y Yohiro">
+                <div class="image-caption">✨ El encuentro que cambió todo</div>
+            </div>
+        </div>
+        
+        <div class="footer-story">
+            © 2025 · Luisa Fernanda Cataño Arias · "Ecos de lo Efímero"
+        </div>
+    </div>
+
+    <script>
+        // Crear el modal dinámicamente con JavaScript
+        (function() {
+            // Crear el modal
+            const modal = document.createElement('div');
+            modal.id = 'imageModal';
+            modal.style.cssText = `
+                display: none;
+                position: fixed;
+                z-index: 99999;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.9);
+                cursor: pointer;
+            `;
+            
+            // Contenedor interno
+            const modalContent = document.createElement('div');
+            modalContent.style.cssText = `
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+            `;
+            
+            // Imagen
+            const modalImg = document.createElement('img');
+            modalImg.style.cssText = `
+                max-width: 50%;
+                max-height: 60%;
+                width: auto;
+                height: auto;
+                object-fit: contain;
+                border-radius: 12px;
+                box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+                border: 2px solid rgba(232, 200, 180, 0.3);
+                cursor: default;
+            `;
+            
+            // Botón cerrar
+            const closeBtn = document.createElement('span');
+            closeBtn.innerHTML = '&times;';
+            closeBtn.style.cssText = `
+                position: absolute;
+                top: 20px;
+                right: 35px;
+                color: white;
+                font-size: 45px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: 0.3s;
+                background: rgba(0,0,0,0.5);
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 100000;
+            `;
+            closeBtn.onmouseover = () => {
+                closeBtn.style.color = '#e8d5b5';
+                closeBtn.style.background = 'rgba(0,0,0,0.8)';
+                closeBtn.style.transform = 'scale(1.1)';
+            };
+            closeBtn.onmouseout = () => {
+                closeBtn.style.color = 'white';
+                closeBtn.style.background = 'rgba(0,0,0,0.5)';
+                closeBtn.style.transform = 'scale(1)';
+            };
+            
+            // Armar el modal
+            modalContent.appendChild(modalImg);
+            modal.appendChild(modalContent);
+            modal.appendChild(closeBtn);
+            document.body.appendChild(modal);
+            
+            // Función para abrir modal
+            window.openImageModal = function(src) {
+                modalImg.src = src;
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            };
+            
+            // Función para cerrar modal
+            function closeImageModal() {
+                modal.style.display = 'none';
+                modalImg.src = '';
+                document.body.style.overflow = 'auto';
+            }
+            
+            // Cerrar al hacer clic en el fondo
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal || e.target === modalContent) {
+                    closeImageModal();
+                }
+            });
+            
+            // Cerrar con botón
+            closeBtn.addEventListener('click', closeImageModal);
+            
+            // Cerrar con tecla ESC
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal.style.display === 'block') {
+                    closeImageModal();
+                }
+            });
+            
+            // Asignar evento de clic a las imágenes de la galería
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const imgSrc = this.getAttribute('data-img');
+                    if (imgSrc) {
+                        openImageModal(imgSrc);
+                    }
+                });
+            });
+        })();
+    </script>
+</body>
+</html>

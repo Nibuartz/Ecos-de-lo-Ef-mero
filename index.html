@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Ecos de lo Efímero</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="background"></div>
+
+    <header>
+        <h1>Ecos de lo Efímero</h1>
+        <p>Espíritus y símbolos de la tradición japonesa</p>
+    </header>
+
+    <main>
+        <div class="book-container">
+            <div class="book">
+                <div class="page-spread">
+                    <img src="pages/1.jpg" alt="Páginas 1-2">
+                </div>
+                <div class="page-spread">
+                    <img src="pages/2.jpg" alt="Páginas 3-4">
+                </div>
+                <div class="page-spread">
+                    <img src="pages/3.jpg" alt="Páginas 5-6">
+                </div>
+                <div class="page-spread">
+                    <img src="pages/4.jpg" alt="Páginas 7-8">
+                </div>
+                <div class="page-spread">
+                    <img src="pages/5.jpg" alt="Páginas 9-10">
+                </div>
+                <div class="page-spread">
+                    <img src="pages/6.jpg" alt="Páginas 11-12">
+                </div>
+                <div class="page-spread">
+                    <img src="pages/7.jpg" alt="Páginas 13-14">
+                </div>
+                <div class="page-spread">
+                    <img src="pages/8.jpg" alt="Páginas 15-16">
+                </div>
+                <div class="page-spread">
+                    <img src="pages/9.jpg" alt="Páginas 17-18">
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="prev" class="nav-btn prev-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                    <span>Anterior</span>
+                </button>
+                
+                <div class="page-indicator">
+                    <span class="page-label">PLIEGO</span>
+                    <span id="currentSpread">1</span>
+                    <span class="separator">/</span>
+                    <span id="totalSpreads">9</span>
+                </div>
+
+                <button id="zoomBtn" class="nav-btn zoom-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        <line x1="11" y1="8" x2="11" y2="14"></line>
+                        <line x1="8" y1="11" x2="14" y2="11"></line>
+                    </svg>
+                    <span>Zoom</span>
+                </button>
+
+                <!-- BOTÓN DE DESCARGA PDF -->
+                <a id="downloadPdf" class="nav-btn download-btn" href="libro.pdf" download="Ecos_de_lo_Efimero.pdf">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="7 10 12 15 17 10"/>
+                        <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    <span>Descargar PDF</span>
+                </a>
+                
+                <button id="next" class="nav-btn next-btn">
+                    <span>Siguiente</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- TRES CONTENEDORES DE RELATOS CON ENLACES -->
+            <div class="stories-container">
+                <div class="story-card" data-page="0">
+                    <div class="story-icon">🌸</div>
+                    <h3 class="story-title">Sakura y Yohiro</h3>
+                    <p class="story-preview">Una historia sobre lo efímero, donde el amor 
+                        transforma incluso aquello que parecía vacío.
+                    </p>
+                    <p class="story-preview">
+                        En la fragilidad de un instante, puede habitar lo eterno.
+                    </p>
+                    <div class="story-buttons">
+                        <a href="relatos/relato1.html" class="story-full-btn">✨ Leer relato completo →</a>
+                    </div>
+                </div>
+
+                <div class="story-card" data-page="3">
+                    <div class="story-icon">🌙</div>
+                    <h3 class="story-title">Kaguya-hime</h3>
+                    <p class="story-preview">Entre la tierra y la luna, existen historias que 
+                        nunca pertenecen del todo a un solo lugar.
+                    </p>
+                    <p class="story-preview">
+                        Algunas presencias llegan, transforman… y se van.
+                    </p>
+                    <div class="story-buttons">
+                        <a href="relatos/relato2.html" class="story-full-btn">✨ Leer relato completo →</a>
+                    </div>
+                </div>
+
+                <div class="story-card" data-page="6">
+                    <div class="story-icon">☀️</div>
+                    <h3 class="story-title">Amaterasu</h3>
+                    <p class="story-preview">
+                        Cuando la luz desaparece, el mundo pierde su forma.
+                    </p>
+                    <p class="story-preview">
+                        Pero incluso en la oscuridad, existe la posibilidad de volver.
+                    </p>
+                    <div class="story-buttons">
+                        <a href="relatos/relato3.html" class="story-full-btn">✨ Leer relato completo →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="copyright">
+                © 2026 · <span class="author">Luisa Fernanda Cataño Arias..</span>
+            </p>
+            <p class="credits">
+                "Ecos de lo Efímero" - Espíritus y símbolos de la tradición japonesa
+            </p>
+        </div>
+    </footer>
+
+    <!-- Modal para zoom -->
+    <div id="zoomModal" class="zoom-modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="zoomedImage">
+        <div class="modal-nav">
+            <button id="modalPrev" class="modal-nav-btn">◀ Anterior</button>
+            <button id="modalNext" class="modal-nav-btn">Siguiente. ▶</button>
+        </div>
+    </div>
+
+    <audio id="flipSound">
+        <source src="https://www.soundjay.com/misc/sounds/page-flip-1.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
